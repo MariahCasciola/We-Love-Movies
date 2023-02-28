@@ -10,7 +10,11 @@ function listMoviesThatAreShowing() {
   return knex("movies as m")
     .join("movies_theaters as mt", "m.movie_id", "mt.movie_id")
     .distinct("m.*")
-    .where({ "mt.is_showing": true })
+    .where({ "mt.is_showing": true });
 }
 
-module.exports = { listAllMovies, listMoviesThatAreShowing };
+function read(movieId) {
+  return knex("movies as m").select("*").where({ movie_id: movieId }).first();
+}
+
+module.exports = { listAllMovies, listMoviesThatAreShowing, read };
