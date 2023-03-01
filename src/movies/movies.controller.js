@@ -21,7 +21,7 @@ async function listAllMovies(req, res, next) {
 }
 
 function read(req, res, next) {
-  const data = req.locals.movie;
+  const data = res.locals.movie;
   res.json({ data });
 }
 
