@@ -25,7 +25,30 @@ function read(req, res, next) {
   res.json({ data });
 }
 
+async function listTheatersPlaying(req, res, next) {
+  const { movieId } = req.params;
+  const data = await moviesService.listTheatersPlaying(movieId);
+  res.json({ data });
+}
+
+async function listReviewsWithCritics(req, res, next) {
+  const { movieId } = req.params;
+  const data = await moviesService.listReviewsWithCritics(movieId);
+  // array called data, with object elements
+  //for every object filled with review keys
+  // add a new key called critic, with an object value of the matching critcs table
+  res.json({ data });
+}
+
 module.exports = {
   list: asyncErrorBoundary(listAllMovies),
   read: [asyncErrorBoundary(movieExists), read],
+  listTheatersPlaying: [
+    asyncErrorBoundary(movieExists),
+    asyncErrorBoundary(listTheatersPlaying),
+  ],
+  listReviewsWithCritics: [
+    asyncErrorBoundary(movieExists),
+    asyncErrorBoundary(listReviewsWithCritics),
+  ],
 };
