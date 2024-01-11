@@ -8,10 +8,11 @@
 
 ## Description
 
-I am a cinephile with a love for all sorts of niche movies. I love Studio Ghibli’s Spirited Away, BladeRunner, Rear Window, Spiderman: Into the Spider-Verse, and more. Please enjoy this list of movies I have compiled in this API! Sit back, grab some popcorn, and enjoy!
+This is RESTful service which communicates with a PostgreSQL database.
 
-Here is a link: [RESTful Service](https://we-love-movies-1pzh.onrender.com). The paths are described below:
+Here is a link to a React UI utilizing the API: [React UI]() 
 
+Here is a link to the API to list raw JSON: [RESTful Service](https://we-love-movies-1pzh.onrender.com). The paths are described below:
 
 ## RESTful API Routes
 
