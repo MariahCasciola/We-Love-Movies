@@ -3,14 +3,14 @@
 ## Technologies
 
  ```text
- JavaScript, Node.js, Express.js PostgreSQL, Knex, ElephantSQL, Render, Postman, JSON viewer, SuperTest, and VSCode. 
+ JavaScript, Node.js, Express.js, PostgreSQL, Knex, ElephantSQL, Render, Postman, JSON viewer, SuperTest, and VSCode. 
  ```
 
 ## Description
 
-This is RESTful service which communicates with a PostgreSQL database.
+This is a RESTful service that communicates with a PostgreSQL database.
 
-Here is a link to a React UI utilizing the API: [React UI]() 
+Here is a link to a React UI utilizing the API: [React UI](https://we-love-movies-ui-9f0n.onrender.com) 
 
 Here is a link to the API to list raw JSON: [RESTful Service](https://we-love-movies-1pzh.onrender.com). The paths are described below:
 
@@ -28,7 +28,7 @@ Here is a link to the API to list raw JSON: [RESTful Service](https://we-love-mo
     GET /movies?is_showing=true
     ```
 
-+ Lists one movie. If a movie does not exist, a user should recieve an error message saying the movie cannot be found with a response of a `404`.
++ Lists one movie. If a movie does not exist, a user should receive an error message saying the movie cannot be found with a response of `404`.
 
     ```text
     GET /movies/:movieId
@@ -50,13 +50,13 @@ Here is a link to the API to list raw JSON: [RESTful Service](https://we-love-mo
     GET /movies/:movieId/reviews
     ```
 
-+ Lists the theaters and, the movies playing at each theatre.
++ Lists the theaters and the movies playing at each theatre.
 
     ```text
     GET /theaters
     ```
 
-+ Deletes a review based on it's id and resonds with a `204 No Content`.
++ Deletes a review based on its ID and responses with a `204 No Content`.
 
     ```text
     DELETE /reviews/:reviewId
@@ -80,19 +80,19 @@ Here is a link to the API to list raw JSON: [RESTful Service](https://we-love-mo
     {"score": 3, "content": "New content..."}
     ```
 
-+ Error message recieved when requesting a review that does not exist, responds with a 404 status code.
++ Error message received when requesting a review that does not exist; responds with a 404 status code.
 
     ```json
     {"error": "Review cannot be found."}
     ```
 
-+ Error message recieved when requesting with missing `score` field in body:
++ Error message received when requesting with missing `score` field in the body:
 
     ```json
     {"error": "A 'score' property is required."}
     ```
 
-+ Error message recieved when requesting with missing `content` field in body:
++ Error message received when requesting with missing `content` field in the body:
 
     ```json
     {"error": "A 'content' property is required."}
